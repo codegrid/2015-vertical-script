@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>writing-mode</title>
+<style>
+strong { color: tomato; }
+.vrl,.vlr,.srl,.slr {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid tomato;
+  padding: 10px;
+  margin: 0 0 30px;
+}
+/* 縦書きとなり、行は右から左へ */
+.vrl {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/* 縦書きとなり、行は左から右へ */
+.vlr {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+/* 縦書きとなり、行は右から左へ。各行内のテキストは左に倒れる（反時計周りに90度） */
+.srl {
+  writing-mode: sideways-rl;
+}
+/* 縦書きとなり、行は左から右へ。各行内のテキストは右に倒れる（時計周りに90度） */
+.slr {
+  writing-mode: sideways-lr;
+}
+</style>
+</head>
+<body>
+
+<div class="vrl">
+  <strong>writing-mode: vertical-rl;</strong><br>
+  <b>1.The quick brown fox jumps over the lazy dog.</b><br>
+  この文章はDummyテキストです。
+</div>
+<div class="vlr">
+  <strong>writing-mode: vertical-lr;</strong><br>
+  <b>2.The quick brown fox jumps over the lazy dog.</b><br>
+  この文章はDummyテキストです。
+</div>
+<div class="srl">
+  <strong>writing-mode: sideways-rl;</strong><br>
+  <b>3.The quick brown fox jumps over the lazy dog.</b><br>
+  この文章はDummyテキストです。
+</div>
+<div class="slr">
+  <strong>writing-mode: sideways-lr;</strong><br>
+  <b>4.The quick brown fox jumps over the lazy dog.</b><br>
+  この文章はDummyテキストです。
+</div>
+
+</body>
+</html>

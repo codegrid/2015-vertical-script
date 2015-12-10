@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>writing-mode</title>
+<style>
+table {
+  border: 2px solid gold;
+}
+th {
+  padding: 5px;
+  background-color: silver;
+  border: 1px solid tomato;
+}
+td {
+  padding: 5px;
+  border: 1px solid limegreen;
+}
+.vrl,.vlr,.srl,.slr {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+}
+/* 縦書きとなり、行は右から左へ */
+.vrl {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/* 縦書きとなり、行は左から右へ */
+.vlr {
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+  writing-mode: vertical-lr;
+}
+/* 縦書きとなり、行は右から左へ。各行内のテキストは左に倒れる（反時計周りに90度） */
+.srl {
+  writing-mode: sideways-rl;
+}
+/* 縦書きとなり、行は左から右へ。各行内のテキストは右に倒れる（時計周りに90度） */
+.slr {
+  writing-mode: sideways-lr;
+}
+</style>
+</head>
+<body>
+
+<table class="vrl">
+  <thead>
+    <tr>
+      <th>プロパティ</th>
+      <th>値</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>writing-mode</td>
+      <td>vertical-rl</td>
+      <td>日本語（Japanese）です。</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="vlr">
+  <thead>
+    <tr>
+      <th>プロパティ</th>
+      <th>値</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>writing-mode</td>
+      <td>vertical-lr</td>
+      <td>日本語（Japanese）です。</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="srl">
+  <thead>
+    <tr>
+      <th>プロパティ</th>
+      <th>値</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>writing-mode</td>
+      <td>sideways-rl</td>
+      <td>日本語（Japanese）です。</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="slr">
+  <thead>
+    <tr>
+      <th>プロパティ</th>
+      <th>値</th>
+      <th>メモ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>writing-mode</td>
+      <td>sideways-lr</td>
+      <td>日本語（Japanese）です。</td>
+    </tr>
+  </tbody>
+</table>
+
+
+</body>
+</html>

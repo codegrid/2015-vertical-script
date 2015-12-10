@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>text-combine-upright</title>
+<style>
+strong { color: tomato; }
+.vrl {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid tomato;
+  padding: 10px;
+  margin: 0 0 30px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/* 縦中横に配置する */
+.test {
+  -webkit-text-combine: horizontal;
+  -ms-text-combine-horizontal: all;
+  text-combine-upright: all;
+}
+/* 桁数無指定（2桁以下）の数値を縦中横 */
+.test2 {
+  -ms-text-combine-horizontal: digits;
+  text-combine-upright: digits;
+}
+/* 3桁以下の数値を縦中横 */
+.test3 {
+  -ms-text-combine-horizontal: digits 3;
+  text-combine-upright: digits 3;
+}
+/* 4桁以下の数値を縦中横 */
+.test4 {
+  -ms-text-combine-horizontal: digits 4;
+  text-combine-upright: digits 4;
+}
+/* 無効になる */
+.test5 {
+  -ms-text-combine-horizontal: digits 5;
+  text-combine-upright: digits 5;
+}
+</style>
+</head>
+<body>
+
+<div class="vrl">
+  <strong>text-combine-upright: all;</strong><br>
+  <span class="test">1985</span>年<span class="test">12</span>月<span class="test">7</span>日
+  <span class="test">３０</span>回目の誕生日なので<span class="test">30</span>歳です。
+</div>
+<div class="vrl test2">
+  <strong>text-combine-upright: digits;</strong><br>
+  1985年12月7日「“この文章は”Dummyテキストです。」
+  ３０回目の誕生日なので30歳です。
+</div>
+<div class="vrl test3">
+  <strong>text-combine-upright: digits 3;</strong><br>
+  1985年12月7日「“この文章は”Dummyテキストです。」
+  ３０回目の誕生日なので30歳です。
+</div>
+<div class="vrl test4">
+  <strong>text-combine-upright: digits 4;</strong><br>
+  1985年12月7日「“この文章は”Dummyテキストです。」
+  ３０回目の誕生日なので30歳です。
+</div>
+<div class="vrl test5">
+  <strong>text-combine-upright: digits 5;（無効）</strong><br>
+  1985年12月7日「“この文章は”Dummyテキストです。」
+  ３０回目の誕生日なので30歳です。
+</div>
+
+</body>
+</html>

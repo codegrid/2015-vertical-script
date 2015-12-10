@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>text-orientation</title>
+<style>
+strong { color: tomato; }
+.to-mixed,.to-upright,.to-sideways {
+  display: inline-block;
+  vertical-align: top;
+  border: 3px solid tomato;
+  padding: 10px;
+  margin: 0 0 30px;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+/* テキストに応じて自動判断 */
+.to-mixed {
+  -webkit-text-orientation: mixed;
+  text-orientation: mixed;
+}
+/* すべてのテキストを正立 */
+.to-upright {
+  -webkit-text-orientation: upright;
+  text-orientation: upright;
+}
+/* すべてのテキストを横倒し*/
+.to-sideways {
+  -webkit-text-orientation: sideways;
+  text-orientation: sideways;
+}
+</style>
+</head>
+<body>
+
+<div class="to-mixed">
+  <strong>text-orientation: mixed;</strong><br>
+  <b>1.The quick brown fox jumps over the lazy dog.</b><br>
+  「“この文章は”Dummyテキストです。」
+</div>
+<div class="to-upright">
+  <strong>text-orientation: upright;</strong><br>
+  <b>2.The quick brown fox jumps over the lazy dog.</b><br>
+  「“この文章は”Dummyテキストです。」
+</div>
+<div class="to-sideways">
+  <strong>text-orientation: sideways;</strong><br>
+  <b>3.The quick brown fox jumps over the lazy dog.</b><br>
+  「“この文章は”Dummyテキストです。」
+</div>
+
+</body>
+</html>
