@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>=^.^=</title>
+<style>
+body{
+  font-family: sans-serif;
+}
+.verticalNav{
+  width: 130px;
+  padding: 10px;
+  background: #ccc;
+}
+
+/* float を後で使うので clearfix もしておく */
+.verticalNav:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.verticalNav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+.verticalNav li{
+      -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+          writing-mode: vertical-rl;
+  float: right;
+}
+
+.verticalNav li:nth-child( 5n+1 ){
+  clear: right;
+}
+</style>
+</head>
+<body>
+
+<div class="verticalNav">
+  <ul>
+    <li>第1回、お茶を飲む</li>
+    <li>第2回、世界の茶葉</li>
+    <li>第14回、紅茶の製造</li>
+    <li>第15回、オーソドックス製法</li>
+    <li>第16回、CTC製法</li>
+    <li>第25回、燻製茶の楽しみ方</li>
+    <li>第26回、フレーバード・ルイボスティーをおいしく入れるコツ</li>
+  </ul>
+</div>
+
+</body>
+</html>
